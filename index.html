@@ -17,17 +17,49 @@
             <span class="brand__mark">N</span><span>NOVA SPACE</span>
           </div>
         </div>
-        <!-- ЗАДАНИЕ 1: удалите эту заглушку и САМИ создайте форму по Figma.
-           Используйте готовые CSS-классы из styles/style.css.
-           Требуемые id: login-form, email, password, email-error,
-           password-error, form-status.
-           Нужны label, input[type=email], input[type=password],
-           button[type=submit], два блока ошибок и блок результата. -->
-        <section class="auth__placeholder">
+        <section class="auth-card">
           <span class="auth-card__mark">N</span>
-          <h2>Здесь будет ваша форма</h2>
-          <p>Создайте карточку и поля самостоятельно. Откройте макет Figma.</p>
-          <p class="auth__todo">TODO HTML → TODO JS → проверка</p>
+          <h1 class="auth-card__title">С возвращением!</h1>
+          <p class="auth-card__intro">Войдите в аккаунт NOVA SPACE чтобы продолжить работу</p>
+
+          <form id="login-form" class="auth-form" novalidate>
+            <div class="field">
+              <label class="field__label" for="email">Электронная почта</label>
+              <input
+                class="field__input"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="student@example.com"
+                required
+                aria-describedby="email-error"
+                aria-invalid="false"
+              />
+              <p class="field__error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label class="field__label" for="password">Пароль</label>
+              <input
+                class="field__input"
+                id="password"
+                name="password"
+                type="password"
+                placeholder="Минимум 8 символов"
+                required
+                minlength="8"
+                aria-describedby="password-error"
+                aria-invalid="false"
+              />
+              <p class="field__error" id="password-error"></p>
+            </div>
+
+            <button class="submit-button" type="submit">Войти в аккаунт</button>
+
+            <p class="form-status" id="form-status"></p>
+          </form>
+
+          <p class="auth-card__note">Учебная форма. Реальной авторизации нет</p>
         </section>
       </main>
     </div>
